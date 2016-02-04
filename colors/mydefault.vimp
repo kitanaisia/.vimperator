@@ -1,0 +1,62 @@
+" ==VimperatorColorChema==
+" name: abyss
+" ==/VimperatorColorSchema==
+
+hi Bell               display: none;
+"hi CmdLine            font-family: monospace; font-size: 9pt; padding: 3px 2px;
+"
+"hi CompResult         font-family: monospace; width: 35%; overflow: hidden;
+"hi CompDesc           width: 60%; color: LightGray; font-size: 9pt;
+"hi CompItem           font-size: 9pt; color: PaleGreen;
+"hi CompItem[selected] background-color: DimGray;
+"hi CompTitle          color: DeepPink; font-size: 11pt;
+
+hi CompTitle background: DarkOrchid;
+hi CompTitle>* color: white; border-bottom: 1px solid #3c3c3f; padding: 1px 0.5ex; text-shadow: 1px 1px 0px #0c0c0c;
+hi CompItem[selected] color: cyan; background: #333;
+hi CompDesc color: Pink;
+
+hi Title color: white;
+hi Indicator color: DodgerBlue;
+hi String color: Orchid;
+hi Number color: Orchid;
+hi Object color: Khaki;
+hi Function color: SkyBlue;
+hi URL color: LightGreen;
+"hi Gradient           display: none;
+" hint style
+hi Hint               font-family: monospace; font-size: 16px; font-weight: normal; color: white; background-color: rgba(0, 0, 0, 0.5); border: solid 1px LightGray;
+hi HintElem           background-color: Khaki;opacity: 0.5; color: Black;
+hi HintActive         background-color: Orange; color: White;
+
+hi Keyword            color: DodgerBlue;
+hi NonText            background-color: #333;
+hi Normal             color: LightGray; background-color: #333;		
+hi Question           color: LightGray; background-color: #333;
+
+" Status Line
+hi StatusLine         color: White; background-color: Gray;
+"hi StatusLineBroken   color: Black; background-color: DarkRed;
+"hi StatusLineSecure   color: Black; background-color: LimeGreen;
+
+hi Tag                color: Orchid;
+hi Title              color: DeepPink;
+hi URL                color: LimeGreen;
+
+" Messages
+hi Normal color: LightYellow; background: Black; font-size: 12pt; opacity: 0.7;
+hi Message            color: LightGray; background-color: #333;
+hi ErrorMsg           background-color: DarkRed;
+hi InfoMsg            background-color: #333;
+hi ModeMsg            color: Green; background-color: LightGreen
+hi MoreMsg            background-color: #333;
+hi WarningMsg         background-color: #333;
+
+" JavaScript Objects
+hi Boolean            color: Chocolate;
+hi Function           color: RoyalBlue;
+hi Null               color: SlateGray;
+hi Number             color: Crimson;
+hi Object             color: Khaki;
+hi String             color: LimeGreen;
+

@@ -1,0 +1,92 @@
+"================================================================================
+"	カラースキーム設定
+"================================================================================
+colorscheme mydefault
+
+"================================================================================
+"	変数設定
+"================================================================================
+set hlsearch
+"ページを開いた直後に，挿入モードにならないようにする．
+set focuscontent
+"ヒントモードでmigemoによる絞り込みを可能にする
+" set hintmatching=custom
+"ヒントモードで使う文字
+set hintchars=ifjklasdhguonmerwc
+"タイトルはVimperatorに
+set titlestring=Vimperator
+"次のページ，前のページへのジャンプ
+set nextpattern=\bnext\b,\bmore\b,^next$,^次(の)?ページ,\b次.*,^次へ$,→\b,^>$,^(>>|≫)$,^(>|≫),(>|≫)$
+set previouspattern=\bprev|previous\b,^prev$,^前(の)?ページ,\b前.*,^前へ$,\b←,^<$,^(<<|≪)$,^(<|≪),(<|≪)$
+"外部エディタ起動時の設定
+set editor="/usr/bin/gvim -f -c ':set fenc=utf-8'"
+"open,tabopenの際の補完設定
+set complete=sbhf
+"ヒントモードで選択が一意に定まっても，<CR>を押さないと確定しない
+set followhints=1
+"================================================================================
+"	すべてのモードのキーマッピング
+"================================================================================
+map <C-[> <ESC>
+"================================================================================
+"	ノーマルモードのキーマッピング
+"================================================================================
+"移動量を多くする
+nnoremap j 3j
+nnoremap k 3k
+"モード移行時に，IMEをオフに．
+nnoremap : :!fcitx-remote -c<CR><ESC>:
+nnoremap f :!fcitx-remote -c<CR><ESC>f
+nnoremap F :!fcitx-remote -c<CR><ESC>F
+nnoremap ; :!fcitx-remote -c<CR><ESC>;
+nnoremap o :!fcitx-remote -c<CR><ESC>o
+nnoremap O :!fcitx-remote -c<CR><ESC>O
+nnoremap w :!fcitx-remote -c<CR><ESC>w
+nnoremap W :!fcitx-remote -c<CR><ESC>W
+nnoremap t :!fcitx-remote -c<CR><ESC>t
+nnoremap T :!fcitx-remote -c<CR><ESC>T
+
+"xでタブを閉じる.
+nnoremap x :q<CR>
+nnoremap d <NOP>
+nnoremap D <NOP>
+"h,lで戻る，進む(片手で操作できるように)
+nnoremap h :back<CR>
+nnoremap l :forward<CR>
+"<C-p>,<C-h>はタブ移動"
+nnoremap <A-p> :tabprevious<CR>
+nnoremap <A-n> :tabnext<CR>
+" <C-h>,<C-l>はタブ移動にする
+"nnoremap <C-h> :tabprevious<CR> 
+"nnoremap <C-l> :tabnext<CR>
+"p,P(クリップボードの内容でgoogle検索をかける)を無効化(誤爆防止)
+nnoremap p <NOP>
+nnoremap P <NOP>
+"iで挿入モードへ移行．さらに行末へ
+nnoremap i :!fcitx-remote -c<CR><ESC>gi<C-e>
+" nnoremap i gi
+nnoremap gn :tabnew<CR>
+"================================================================================
+"	挿入モードのキーマッピング
+"================================================================================
+"文字編集用
+inoremap <C-h> <BS>
+inoremap <C-d> <Delete>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+"コピペの挙動
+inoremap <C-v> <S-Insert>
+
+"================================================================================
+"	コマンドラインモードのキーマッピング
+"================================================================================
+"文字編集用
+cnoremap <C-h> <BS>
+cnoremap <C-d> <Delete>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+"履歴の探索
+cnoremap <C-p> <S-TAB>
+cnoremap <C-n> <TAB>
+"コピペの挙動
+cnoremap <C-v> <S-Insert>
