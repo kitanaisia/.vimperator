@@ -35,16 +35,16 @@ map <C-[> <ESC>
 nnoremap j 3j
 nnoremap k 3k
 "モード移行時に，IMEをオフに．
-nnoremap : :!fcitx-remote -c<CR><ESC>:
-nnoremap f :!fcitx-remote -c<CR><ESC>f
-nnoremap F :!fcitx-remote -c<CR><ESC>F
-nnoremap ; :!fcitx-remote -c<CR><ESC>;
-nnoremap o :!fcitx-remote -c<CR><ESC>o
-nnoremap O :!fcitx-remote -c<CR><ESC>O
-nnoremap w :!fcitx-remote -c<CR><ESC>w
-nnoremap W :!fcitx-remote -c<CR><ESC>W
-nnoremap t :!fcitx-remote -c<CR><ESC>t
-nnoremap T :!fcitx-remote -c<CR><ESC>T
+" "nnoremap : :!fcitx-remote -c<CR><ESC>:
+" "nnoremap f :!fcitx-remote -c<CR><ESC>f
+" "nnoremap F :!fcitx-remote -c<CR><ESC>F
+" "nnoremap ; :!fcitx-remote -c<CR><ESC>;
+" "nnoremap o :!fcitx-remote -c<CR><ESC>o
+" "nnoremap O :!fcitx-remote -c<CR><ESC>O
+" "nnoremap w :!fcitx-remote -c<CR><ESC>w
+" "nnoremap W :!fcitx-remote -c<CR><ESC>W
+" "nnoremap t :!fcitx-remote -c<CR><ESC>t
+" "nnoremap T :!fcitx-remote -c<CR><ESC>T
 
 "xでタブを閉じる.
 nnoremap x :q<CR>
@@ -63,7 +63,7 @@ nnoremap <A-n> :tabnext<CR>
 nnoremap p <NOP>
 nnoremap P <NOP>
 "iで挿入モードへ移行．さらに行末へ
-nnoremap i :!fcitx-remote -c<CR><ESC>gi<C-e>
+""nnoremap i :!fcitx-remote -c<CR><ESC>gi<C-e>
 " nnoremap i gi
 nnoremap gn :tabnew<CR>
 "================================================================================
