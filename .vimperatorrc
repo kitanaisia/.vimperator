@@ -64,7 +64,7 @@ nnoremap p <NOP>
 nnoremap P <NOP>
 "iで挿入モードへ移行．さらに行末へ
 ""nnoremap i :!fcitx-remote -c<CR><ESC>gi<C-e>
-nnoremap i gi
+nnoremap i gi<C-e>
 nnoremap gn :tabnew<CR>
 "================================================================================
 "	挿入モードのキーマッピング
@@ -90,3 +90,9 @@ cnoremap <C-p> <S-TAB>
 cnoremap <C-n> <TAB>
 "コピペの挙動
 cnoremap <C-v> <S-Insert>
+
+" コマンドモードではIMEをOFFに
+style! -name=commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
+
+" コマンドラインで自動的にオフ(他にinsertおよびcmd,insertを指定可能)
+let g:imeoff='cmd'
